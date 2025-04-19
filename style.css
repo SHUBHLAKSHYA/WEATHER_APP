@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    color: #333;
+}
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    position: relative;
+    top: 20vh;
+}
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+button:hover {
+    background-color: #4169E1;
+}
+#weatherResult {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.error {
+    color: red;
+}
+#favoritesList {
+    margin-top: 20px;
+    text-align: left;
+}
+.favorite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+.favorite-item span {
+    cursor: pointer;
+    color: #4682B4;
+}
+.favorite-item span:hover {
+    color: #4169E1;
+}
+.delete-btn {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    animation: slideUp 1.5s ease-in-out;
+}
+footer p {
+    margin: 5px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
